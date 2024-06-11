@@ -51,7 +51,7 @@ const CreatePortfolio = () => {
           <textarea
             className="form-control"
             id="description"
-            rows="3"
+            rows={3}
             value={description}
             onChange={(e) => setDescription(e.target.value)}
             required

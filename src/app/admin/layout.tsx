@@ -1,5 +1,5 @@
 "use client"
-
+// @ts-ignore
 import { AdminSideBar , ResponsiveMenu } from '../../components/admin';
 import { AiOutlineMenu } from "react-icons/ai";
 import { useState } from 'react'

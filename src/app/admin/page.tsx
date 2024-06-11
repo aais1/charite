@@ -1,4 +1,4 @@
-
+// @ts-ignore
 const page = () => {
   return (
     <div className="m-5">

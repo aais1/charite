@@ -55,7 +55,7 @@ export default function CreateBlog() {
           <textarea
             className="form-control"
             id="content"
-            rows="5"
+            rows={5}
             value={content}
             onChange={(e) => setContent(e.target.value)}
             required

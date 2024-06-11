@@ -1,5 +1,7 @@
+//@ts-ignore
+
 "use client"
-// @ts-ignore
+
 
 import { useState } from "react";
 import axios from "axios";

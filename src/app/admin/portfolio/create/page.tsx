@@ -1,5 +1,5 @@
-"use client"
 // @ts-ignore
+"use client"
 import { useState } from "react";
 import axios from "axios";
 
@@ -9,13 +9,13 @@ const CreatePortfolio = () => {
   const [description, setDescription] = useState('');
   const [image, setImage] = useState('');
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const newPortfolio = { title, description, image };
+    const newPortfolio: Portfolio = { title, description, image };
 
     try {
-        console.log(title,description,image)
-        await fetch('https://backend-ttr6.onrender.com/portfolio',{
+        console.log(title, description, image);
+        await fetch('https://backend-ttr6.onrender.com/portfolio', {
             method: 'POST',
             body: JSON.stringify(newPortfolio),
             headers: {

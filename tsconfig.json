@@ -1,29 +1,28 @@
 {
   "compilerOptions": {
-    "target": "ES6",
-    "module": "commonjs",
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "noEmit": true,
     "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": false,
-    "outDir": "./dist",
-    "rootDir": "./src",
-    "noEmit": false,
-    "strict": false,                // Disable all strict type-checking options
-    "noImplicitAny": false,         // Allow implicit 'any' types
-    "strictNullChecks": false,      // Disable strict null checks
-    "strictFunctionTypes": false,   // Disable strict checking of function types
-    "strictBindCallApply": false,   // Disable strict 'bind', 'call', and 'apply' methods
-    "strictPropertyInitialization": false,  // Disable strict property initialization checks
-    "noImplicitThis": false,        // Allow 'this' expressions with an implied 'any' type
-    "alwaysStrict": false,          // Disable 'alwaysStrict' flag
-    "skipLibCheck": true,           // Skip type checking of declaration files
+    "module": "esnext",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
-    "sourceMap": true
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./src/*"],
+      "@/assets/*": ["./public/assets/*"],
+    }
   },
-  "include": [
-    "./src/**/*"
-  ],
-  "exclude": [
-    "node_modules",
-    "**/*.spec.ts"
-  ]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
 }

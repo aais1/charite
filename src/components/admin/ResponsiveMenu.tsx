@@ -11,7 +11,7 @@ const ResponsiveMenu = ({setShowMenu,showMenu}) => {
     <aside className="">
         <header className="px-4 py-3">
           <Link href="/" className="text-white text-4xl mb-8 flex gap-x-4 items-center justify-start  font-semibold"
-          onClick={()=>setShowMenu(!showMenu)}>Double'A Ventures <MdOutlineStore style={{fontSize:'2.4rem'}} /></Link>
+          onClick={()=>setShowMenu(!showMenu)}>Charite <MdOutlineStore style={{fontSize:'2.4rem'}} /></Link>
         </header>
         <nav className="px-4 py-3 gap-y-4 font-semibold text-xl">
         <div className='space-y-8'>

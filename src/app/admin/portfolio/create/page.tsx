@@ -11,7 +11,7 @@ const CreatePortfolio = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const newPortfolio: Portfolio = { title, description, image };
+    const newPortfolio = { title, description, image };
 
     try {
         console.log(title, description, image);

@@ -17,7 +17,7 @@ const CreateCause = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    const newCause: Cause = { title, description, goal, image };
+    const newCause = { title, description, goal, image };
     console.log(newCause)
     try {
       await axios.post('https://backend-ttr6.onrender.com/cause', newCause);

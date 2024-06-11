@@ -11,9 +11,9 @@ export default function CreateBlog() {
   const [author, setAuthor] = useState('');
   const [image, setImage] = useState('');
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const newBlog = { title, content, author,image };
+    const newBlog: Blog = { title, content, author, image };
 
     try {
       await axios.post('https://backend-ttr6.onrender.com/blog', newBlog);
@@ -26,6 +26,13 @@ export default function CreateBlog() {
       alert('try again')
     }
   };
+
+  interface Blog {
+    title: string;
+    content: string;
+    author: string;
+    image: string;
+  }
 
   return (
     <div className="container mt-5">

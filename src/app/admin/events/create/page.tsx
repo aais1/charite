@@ -11,9 +11,9 @@ const CreateEvent = () => {
   const [location, setLocation] = useState('');
   const [image,setImage]=useState('');
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const newEvent = { name, description, date, location,image };
+    const newEvent: Event = { name, description, date, location, image };
 
     try {
       await axios.post('https://backend-ttr6.onrender.com/event', newEvent);
@@ -22,6 +22,14 @@ const CreateEvent = () => {
       console.error('There was an error creating the event!', error);
     }
   };
+
+  interface Event {
+    name: string;
+    description: string;
+    date: string;
+    location: string;
+    image: string;
+  }
 
   return (
     <div className="container mt-5">

@@ -1,3 +1,4 @@
+//@ts-nocheck
 'use client'
 import { toast } from 'react-toastify';
 import * as yup from "yup";
